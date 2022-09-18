@@ -1,0 +1,5 @@
+skaffold 1.22.0
+minikube 1.26.0
+kubectl 1.20.9
+kustomize 4.1.2
+terraform 1.0.1

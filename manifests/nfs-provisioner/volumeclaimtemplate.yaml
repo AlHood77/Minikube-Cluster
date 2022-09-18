@@ -1,0 +1,14 @@
+- op: remove
+  path: /spec/template/spec/volumes
+- op: add
+  path: /spec/volumeClaimTemplates
+  value: 
+    - metadata:
+        name: export-volume
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: standard
+        resources:
+          requests:
+            storage: 5Gi

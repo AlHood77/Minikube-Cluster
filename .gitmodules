@@ -1,0 +1,9 @@
+[submodule "operators/postgres-operator"]
+	path = operators/postgres-operator
+	url = https://github.com/zalando/postgres-operator.git
+[submodule "operators/redis-operator"]
+	path = operators/redis-operator
+	url = https://github.com/spotahome/redis-operator.git
+[submodule "manifests/operators/nfs-provisioner"]
+	path = manifests/operators/nfs-provisioner/nfs-provisioner
+	url = https://github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner.git

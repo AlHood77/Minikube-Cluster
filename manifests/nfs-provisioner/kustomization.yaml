@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - nfs-provisioner/deploy/kubernetes/statefulset.yaml
+  - nfs-provisioner/deploy/kubernetes/rbac.yaml
+  - storageclass.yaml
+patchesJson6902:
+  - path: volumeclaimtemplate.yaml
+    target:
+      group: apps
+      kind: StatefulSet
+      name: nfs-provisioner
+      version: v1
+  - path: image.yaml
+    target:
+      group: apps
+      kind: StatefulSet
+      name: nfs-provisioner
+      version: v1 
